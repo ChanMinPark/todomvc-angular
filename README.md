@@ -109,7 +109,7 @@ $ npm install angular --save
 ```
 
 --save 옵션을 붙여주면 angular를 우리 패키지에 추가했다라는 것을 패키지에 기록을 남길 수 있다.  
-save 옵션을 안 주면 사용한 외부 라이브러리가 package.json에 dependency에만 기록이 남고,  
+save 옵션을 주면 사용한 외부 라이브러리가 package.json에 dependency에 기록이 남고,  
 이 프로젝트를 다른 사람이 받아서 ```npm install```을 해주면 dependency에 있는 걸 알아서 설치한다.
 
 * index.html에 앵귤러 로딩
