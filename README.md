@@ -108,15 +108,28 @@ $ touch index.html
 $ npm install angular --save
 ```
 
+--save 옵션을 붙여주면 angular를 우리 패키지에 추가했다라는 것을 패키지에 기록을 남길 수 있다.  
+save 옵션을 안 주면 사용한 외부 라이브러리가 package.json에 dependency에만 기록이 남고,  
+이 프로젝트를 다른 사람이 받아서 ```npm install```을 해주면 dependency에 있는 걸 알아서 설치한다.
+
 * index.html에 앵귤러 로딩
+
+```html
+<!-- 'todomvc'라는 앵귤러 모듈을 사용한거라고 브라우저에게 알리는 것 -->
+<html ng-app="todomvc">
+
+<!--TodomvcCtrl라는 컨트롤러를 사용하겠다고 브라우저에게 알리는 것-->
+<body ng-controller="TodomvcCtrl">
+```
 
 ```html
 <!-- ng-app으로 todomvc 앵귤러 모듈 사용을 브라우저에게 알린다 -->
 <body ng-app="todomvc">
 
-<!-- 앵귤러 로딩 -->
+<!-- 앵귤러 라이브러리 로딩 -->
 <script src="node_modules/angular/angular.js"></script>
 
+<!--todomcv 모듈 로딩-->
 <script src="js/app.js"></script>
 </body>
 ```
@@ -146,7 +159,7 @@ angular.module('todomvc')
 ```
 
 * 컨트롤러스  생성과 동시에 스코프변수(`$scope`)가 자동으로 생서됨
-* 스코프 변수의 역할: 템플릿과 컨트롤러간의 데이터 연결
+* 스코프 변수의 역할: 템플릿(ex. html 파일)과 컨트롤러(angular 모듈)간의 데이터 연결
 * index.html에 스코프 변수 출력하기 (인터폴레이션 문법)
 
 ```html
